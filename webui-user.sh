@@ -6,6 +6,9 @@
 # Install directory without trailing slash
 #install_dir="/home/$(whoami)"
 
+export TORCH_INDEX_URL="https://download.pytorch.org/whl/cu121"
+export TORCH_COMMAND="pip install torch==2.2.2 torchvision==0.17.2 --extra-index-url https://download.pytorch.org/whl/cu121"
+
 # Name of the subdirectory
 #clone_dir="stable-diffusion-webui"
 
