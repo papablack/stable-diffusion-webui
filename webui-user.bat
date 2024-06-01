@@ -15,6 +15,13 @@ set SD_MODEL_URL=https://civitai.com/api/download/models/20414
 set SD_MODEL_NAME=realismEngine_v10.safetensors
 
 set VENV_DIR=venv
+
+if defined FORCE_FP16 (
+    set precision=--precision full --no-half
+) else (
+    set precision=--no-half-vae
+)
+
 :: Define the packages to install
 set check_choco_packages=mingw llvm
 
@@ -45,4 +52,4 @@ if not exist "%SD_MODEL_PATH%\%SD_MODEL_NAME%" (
 
 echo Running webui.bat
 :: Run the web UI script with specified options
-.\webui.bat --skip-python-version-check --share --enable-insecure-extension-access --no-download-sd-model --no-half-vae %auth%
+.\webui.bat --skip-python-version-check --share --enable-insecure-extension-access --xformers --no-download-sd-model %auth% %precision%
