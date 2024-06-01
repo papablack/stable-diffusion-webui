@@ -5,7 +5,7 @@ set PYTORCH_VERSION=2.3.0
 set TORCHVISION_VERSION=0.18.0
 set TORCH_INDEX_URL="https://download.pytorch.org/whl/cu121"
 set TORCH_COMMAND=pip install torch==2.3.0 torchvision==0.18.0 --extra-index-url https://download.pytorch.org/whl/cu121
-
+set XFORMERS_PACKAGE=xformers --index-url https://download.pytorch.org/whl/cu121
 set GRADIO_AUTH=0
 set GRADIO_USER=
 set GRADIO_PASS=
@@ -45,4 +45,4 @@ if not exist "%SD_MODEL_PATH%\%SD_MODEL_NAME%" (
 
 echo Running webui.bat
 :: Run the web UI script with specified options
-.\webui.bat --skip-python-version-check --share --enable-insecure-extension-access --no-download-sd-model --xformers --no-half-vae %auth%
+.\webui.bat --skip-python-version-check --share --enable-insecure-extension-access --no-download-sd-model --no-half-vae %auth%
