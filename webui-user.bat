@@ -4,7 +4,7 @@
 set PYTORCH_VERSION=2.3.0
 set TORCHVISION_VERSION=0.18.0
 set TORCH_INDEX_URL="https://download.pytorch.org/whl/cu121"
-set TORCH_COMMAND="pip install torch==${PYTORCH_VERSION} torchvision==${TORCHVISION_VERSION} --extra-index-url ${TORCH_INDEX_URL}"
+set TORCH_COMMAND=pip install torch==2.3.0 torchvision==0.18.0 --extra-index-url https://download.pytorch.org/whl/cu121
 
 set GRADIO_AUTH=0
 set GRADIO_USER=
