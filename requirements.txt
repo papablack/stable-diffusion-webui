@@ -16,7 +16,7 @@ lark
 numpy
 omegaconf
 open-clip-torch
-
+setuptools
 piexif
 psutil
 pytorch_lightning
@@ -31,3 +31,4 @@ torchdiffeq
 torchsde
 transformers==4.30.2
 pillow-avif-plugin==1.4.3
+distutils
