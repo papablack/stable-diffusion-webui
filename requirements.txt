@@ -23,6 +23,7 @@ pytorch_lightning
 requests
 resize-right
 
+wheel
 safetensors
 scikit-image>=0.19
 tomesd
